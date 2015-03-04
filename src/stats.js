@@ -1,6 +1,7 @@
 function addStats(){
     stats.addStat("exp", 2);
     stats.addStat("explodes", 0);
+    stats.addStat("criticals", 0);
     stats.addStat("chain", 0);
     stats.addStat("clicks", 0);
 };

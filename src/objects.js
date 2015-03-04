@@ -60,7 +60,14 @@ Ball.prototype = {
         }
         reactor.balls.remove(this);
         reactor.explodes.add(this, group);
-        var pts = group[0]*(1+resources.get("bonus"));
+        var crit = resources.get("critical") * 0.01;
+        var roll = Math.random();
+        var multi = 1;
+        if(roll < crit){
+            multi = 2.5;
+            stats.add("criticals",1);
+        }
+        var pts = group[0]*(1+resources.get("bonus"))*multi;;
         reactor.points.add(reactor.transformed(this), pts);
         stats.add("exp", pts);
         stats.add("explodes", 1);

@@ -70,6 +70,10 @@ function prestige(){
     stats.reset(false);
     resources.reset();
     resources.set("bonus", bonus);
+    if(bonus >= 1)
+    {
+        document.getElementById("critical").style.visibility = "visible";
+    }
     reactor.reset();
     save();
 };

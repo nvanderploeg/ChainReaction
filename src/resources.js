@@ -10,6 +10,12 @@ function addResources(){
     resources.addResource("size", size[1], 0).cost(size[4], 10, 1.1).button(size[2], [1, 0]);
     var balls = document.getElementById("balls").children;
     resources.addResource("balls", balls[1], 0).cost(balls[4], 50, 1.1).button(balls[2], [1, 0]);
+    var critical = document.getElementById("critical").children;
+    resources.addResource("critical", critical[1], 0).cost(critical[4], 100000, 1.25).button(critical[2], [1, 0]);
+    if( resources.get("bonus") < 1)
+    {
+        document.getElementById("critical").style.visibility = "hidden";
+    }
 };
 
 function Resource(elem, decimal){
