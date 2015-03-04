@@ -73,6 +73,8 @@ function prestige(){
     if(bonus >= 1)
     {
         document.getElementById("critical").style.visibility = "visible";
+        document.getElementById("critMax").style.visibility = "visible";
+        document.getElementById("critTotal").style.visibility = "visible";
     }
     reactor.reset();
     save();

@@ -15,6 +15,8 @@ function addResources(){
     if( resources.get("bonus") < 1)
     {
         document.getElementById("critical").style.visibility = "hidden";
+        document.getElementById("critMax").style.visibility = "hidden";
+        document.getElementById("critTotal").style.visibility = "hidden";
     }
 };
 
